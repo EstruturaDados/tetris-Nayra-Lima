@@ -78,7 +78,7 @@ void inserirPeca(Fila *f, Peca nova) {
     printf("\n✅ Peça [%c %d] adicionada ao final da fila.\n", nova.nome, nova.id);
 }
 
-// Remove uma peça da frente da fila (dequeue)
+// Remove a peça da frente da fila (dequeue)
 void jogarPeca(Fila *f) {
     if (filaVazia(f)) {
         printf("\n⚠️  A fila está vazia! Nenhuma peça para jogar.\n");
