@@ -110,7 +110,7 @@ void exibirFila(Fila *f) {
 }
 
 // =============================
-// Função principal
+// Função principal do jogo
 // =============================
 int main() {
     Fila fila;
