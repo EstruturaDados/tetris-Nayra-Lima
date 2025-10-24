@@ -4,7 +4,6 @@
 
 /*
     Programa: Simulação da fila de peças do Tetris Stack
-    Autor: [Seu Nome]
     Descrição:
         Este programa simula a fila de peças futuras de um jogo tipo Tetris.
         Ele usa uma estrutura de dados do tipo FILA CIRCULAR para armazenar as peças.
@@ -67,7 +66,7 @@ Peca gerarPeca(int id) {
 // Insere uma peça ao final da fila (enqueue)
 void inserirPeca(Fila *f, Peca nova) {
     if (filaCheia(f)) {
-        printf("\n⚠️  A fila está cheia! Não é possível inserir uma nova peça.\n");
+        printf("\n  A fila está cheia! Não é possível inserir uma nova peça.\n");
         return;
     }
 
@@ -75,13 +74,13 @@ void inserirPeca(Fila *f, Peca nova) {
     f->elementos[f->tras] = nova;
     f->tamanho++;
 
-    printf("\n✅ Peça [%c %d] adicionada ao final da fila.\n", nova.nome, nova.id);
+    printf("\n Peça [%c %d] adicionada ao final da fila.\n", nova.nome, nova.id);
 }
 
 // Remove a peça da frente da fila (dequeue)
 void jogarPeca(Fila *f) {
     if (filaVazia(f)) {
-        printf("\n⚠️  A fila está vazia! Nenhuma peça para jogar.\n");
+        printf("\n  A fila está vazia! Nenhuma peça para jogar.\n");
         return;
     }
 
@@ -89,7 +88,7 @@ void jogarPeca(Fila *f) {
     f->frente = (f->frente + 1) % MAX;
     f->tamanho--;
 
-    printf("\n🎮 Peça jogada: [%c %d]\n", removida.nome, removida.id);
+    printf("\n Peça jogada: [%c %d]\n", removida.nome, removida.id);
 }
 
 // Exibe o estado atual da fila
@@ -146,7 +145,7 @@ int main() {
                 inserirPeca(&fila, gerarPeca(contadorID++));
                 break;
             case 0:
-                printf("\nSaindo do jogo... 🎮\n");
+                printf("\nSaindo do jogo... \n");
                 break;
             default:
                 printf("\nOpção inválida! Tente novamente.\n");
